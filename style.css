@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'my-font';
+    src: url(fonts/Montserrat-Light-Alt1.woff2) format('woff');
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.image {
+    width: 40vw;
+    height: 100vh;
+    background-image: url(images/paulinator_space_city_modern_19bc147b-8d28-46da-9bec-0c9658429d55.png);
+    background-size: 40vw auto;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    background-color: rgba(1, 1, 1, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-size: large;
+    font-family: 'my-font', monospace;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    background-color: rgb(51, 48, 48);
+}
+
+
+.main {
+    height: 40vh;
+}
