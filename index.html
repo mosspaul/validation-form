@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,57 @@
     <link rel="stylesheet" href="style.css">
     <title>Validation Form</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="image">
+            <div class="hero">
+                <h1 id="title">DREAMSCAPE</h1>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>THE FINAL FRONTIER</h2>
+            <p>Join today for a look into the future. The DREAMSCAPE, a conjoining of technology and the mind.</p>
+            <form autocomplete="off">
+                <div class="row">
+                    <div class="inline">
+                        <label for="name">FIRST NAME</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="inline">
+                        <label for="surname">LAST NAME</label>
+                        <input type="text" name="surname" id="surname" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="inline">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" required patter="^\w+@+\w+(.com|.org|.edu)">
+                    </div>
+                    <div class="inline">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="text" name="phone" id="phone" pattern="(\d{10})|(\d{3}( |-|\.)+\d{3}( |-|\.)+\d{4})" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="inline">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" minlength="8" required><button class="show"><img class="icon" src="images/second.svg"></button>
+                    </div>
+                    <div class="inline">
+                        <label for="cpassword">CONFIRM PASSWORD</label>
+                        <input type="password" name="cpassword" id="cpassword" required><button class="show"><img class="icon" src="images/second.svg"></button>
+                    </div>
+                </div>
+                <button id="sub" type="submit">Create Account</button>
+                <p>Already have an account? <span>Log in</span></p>
+            </form>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
