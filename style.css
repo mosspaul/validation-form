@@ -1,3 +1,9 @@
+:root {
+    --white: rgb(245, 245, 245);
+    --black: rgb(25, 24, 24);
+    --green: #3fcf8e;
+}
+
 @font-face {
     font-family: 'my-font';
     src: url(fonts/Montserrat-Light-Alt1.woff2) format('woff');
@@ -24,28 +30,109 @@ body {
 }
 
 .hero {
-    background-color: rgba(1, 1, 1, 0.3);
     color: white;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    height: 3em;
 }
 
 #title {
-    font-size: large;
-    font-family: 'my-font', monospace;
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-size: 80px;
+    font-family:'my-font';
 }
 
 
 .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 60vw;
-    background-color: rgb(51, 48, 48);
+    background-color: var(--black);
+}
+
+h2, p , label {
+    color: var(--white);
+    font-family: 'my-font';
+    text-align: left;
+}
+
+h2 {
+    font-size: 50px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    margin: 10px;
 }
 
 
-.main {
-    height: 40vh;
+input.touched:required:invalid, 
+input.touched:required:valid,
+input.touched:required {
+   border: var(--white);
+    border-radius: 2px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+input.touched:required:invalid {
+    border: 1.5px solid rgb(172, 59, 59);
+}
+
+
+input:required {
+    width: 21vw;
+    border: 1.5px solid var(--white);
+    border-radius: 2px;
+    background-color: var(--black);
+    color: var(--white)
+}
+
+.row {
+    margin: 20px;
+    display: flex;
+}
+
+.inline {
+    display: inline;
+    margin: 0 20px;
+}
+
+#sub {
+    margin-top: 20px;
+    border: 1.5px solid var(--green);
+    color: var(--green);
+    background-color: var(--black);
+    width: 15vw;
+    height: 4em;
+    border-radius: 2px;
+    font-size: 1.25em;
+}
+
+span {
+    color: var(--green);
+}
+
+.show {
+    margin-left: 2px;
+    position: relative;
+    top: 7px;
+    display: inline;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--black);
+    color: var(--white);
+    height: 1.25em;
+}
+
+.icon {
+    height: 1.5em;
+    width: auto;
 }
